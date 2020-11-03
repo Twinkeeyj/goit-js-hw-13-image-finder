@@ -15,7 +15,7 @@ let page=1;
 var scrollTop =document.documentElement.scrollTop
 
 const inputHeder = function () {
-       console.log(input.value);
+      
     servis(input.value, page)
         .then((data) => {
            
@@ -29,7 +29,7 @@ const inputHeder = function () {
                 ul.innerHTML = ""
                 button.classList.add('is-hidden')
             }
-          console.log(data.hits);
+       
         })    
                 ul.innerHTML = ""
                 button.classList.add('is-hidden')
@@ -51,10 +51,10 @@ const down = function () {
             loadMore();
             
             const fn = function () {
-                window.scrollBy(0, 672);
+                window.scrollBy(0, 550);
                 behavior: "smooth"
             };
-      setTimeout(fn, 75)       
+      setTimeout(fn, 150)       
            
     }
 }
