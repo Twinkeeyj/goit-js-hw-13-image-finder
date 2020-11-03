@@ -4,7 +4,7 @@ html {
 
 *,
 *::before,
-*::after {
+::after {
   box-sizing: inherit;
 }
 body {
@@ -14,19 +14,17 @@ body {
 
 .stats {
   display: flex;
-  position: absolute;
-  bottom: 5px;
-  left: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.stats-item {
-  margin-right: 40px;
+.stats-item:not(:last-child) {
+  margin-right: 25px;
 }
 .photo-card {
   outline: 3px solid#663399;
-
   background-color: #ac7edb;
-  width: 340px;
-  height: 420px;
+  width: 400px;
+  height: 330px;
   position: relative;
   box-shadow: 13px 14px 20px -4px #7565ed;
 }
@@ -34,7 +32,10 @@ ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin-left: 0px;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 auto;
+  padding-left: 0;  */
 }
 li {
   margin-right: 15px;
@@ -67,4 +68,8 @@ button:hover {
   font-size: 23px;
   outline: 3px solid#663399;
   font-style: italic;
+}
+img {
+  width: 400px;
+  height: 250px;
 }
